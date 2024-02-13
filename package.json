@@ -1,0 +1,19 @@
+{
+  "name": "rinha-back-bun",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --watch src/index.ts"
+  },
+  "type": "module",
+  "dependencies": {
+    "elysia": "^0.8.17",
+    "prisma": "^5.9.1"
+  }
+}
