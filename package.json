@@ -15,6 +15,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@bogeychan/elysia-logger": "^0.0.17",
     "drizzle-orm": "^0.29.3",
     "elysia": "^0.8.17",
     "joi": "^17.12.1",
