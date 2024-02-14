@@ -1,10 +1,10 @@
 #!/usr/bin/bash
 
-# Use este script para executar testes locais
-
 RESULTS_WORKSPACE="$(pwd)/load-test/user-files/results"
-GATLING_BIN_DIR=$HOME/gatling/3.10.3/bin
+GATLING_BIN_DIR=$HOME/gatling/bin
 GATLING_WORKSPACE="$(pwd)/load-test/user-files"
+
+
 
 runGatling() {
     sh $GATLING_BIN_DIR/gatling.sh -rm local -s RinhaBackendCrebitosSimulation \
@@ -15,7 +15,7 @@ runGatling() {
 
 startTest() {
     for i in {1..20}; do
-        # 2 requests to wake the 2 api instances up :)
+        # 2 requests to wake the 2 API instances up
         curl --fail http://localhost:9999/clientes/1/extrato && \
         echo "" && \
         curl --fail http://localhost:9999/clientes/1/extrato && \
